@@ -1,0 +1,20 @@
+# First Pipeline
+# Project Name is Lens
+#Team is Len works under me only
+# https://aka.ms/yaml
+
+jobs: 
+- task: AzurePowerShell@5
+  inputs:
+    ScriptType: 'InlineScript'
+    Inline: |
+      az login
+      az group list
+    azurePowerShellVersion: 'LatestVersion'
+
+pool : jhund
+
+name : 1
+
+trigger : none
+
